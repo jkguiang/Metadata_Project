@@ -47,6 +47,7 @@ void plotMvsC(){
 	//Draw Histogram
 	hist->GetXaxis()->SetTitle("Merge Time (s)");
 	hist->GetYaxis()->SetTitle("Copy Time (s)");
+	hist->GetYaxis()->SetTitleOffset(1.4);
 	hist->Draw("colz");
 	
 	return;

@@ -47,6 +47,7 @@ void plotMvsA(){
 	//Draw Histogram
 	hist->GetXaxis()->SetTitle("Merge Time (s)");
 	hist->GetYaxis()->SetTitle("Add Info Time (s)");
+	hist->GetYaxis()->SetTitleOffset(1.4);
 	hist->Draw("colz");
 	
 	return;
