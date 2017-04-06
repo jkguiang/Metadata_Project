@@ -1,5 +1,5 @@
 Description:
-This repository contains information and scripts relevent to the analyzation of CMS metadata.
+This repository contains information and scripts relevant to the analysis of CMS metadata.
 
 Contents:
 1. data - contains .root file with information from ~15000 log files
