@@ -105,6 +105,7 @@ for file in os.listdir(os.curdir):
 
 #Global array Definitions
 intNames_arr = np.zeros(1, dtype = int)
+hours_arr = np.zeros(1, dtype = int)
 days_arr = np.zeros(1, dtype = int)
 months_arr = np.zeros(1, dtype = int)
 years_arr = np.zeros(1, dtype = int)
@@ -123,6 +124,7 @@ t = ROOT.TTree("t","Entries")
 #Build TTree
 def build_TTree():
 	t.Branch('ComputerNumber', intNames_arr, "ComputerNumber/I")
+	t.Branch('Hour', hours_arr, 'Hour/I')
 	t.Branch('Day', days_arr, "Day/I")
 	t.Branch('Month', months_arr, "Month/I")
 	t.Branch('Year', years_arr, "Year/I")
@@ -139,6 +141,7 @@ def write_TTree():
 	for entry in entryList:
 		dt = datetime.fromtimestamp(entry.TimeStamp)
 		intNames_arr[0] = entry.intName
+		hours_arr[0] = dt.hour
 		days_arr[0] = dt.day
 		months_arr[0] = dt.month
 		years_arr[0] = dt.year
