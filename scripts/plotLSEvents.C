@@ -61,7 +61,7 @@ void plotLSEvents(){
 		}
 	}
 	
-	h2->GetXaxis()->SetTitle("Copy Time (s)");
+	h2->GetXaxis()->SetTitle("Events Processed");
 	h2->SetLineColor(2);
 	h2->SetLineWidth(2);
 	h2->DrawNormalized();

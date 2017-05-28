@@ -37,12 +37,12 @@ void plotLJTJHrlySame(){
 	Double_t xhigh = 24;
 	
 	//Initialize Histogram
-	TH1D *h1 = new TH1D("h1", "Long Job Time/All Jobs Distribution (January 31st, 2017)", nbinsx, xlow, xhigh);	
+	TH1D *h1 = new TH1D("h1", "Long Job Time/All Jobs Distribution (January 7th, 2017)", nbinsx, xlow, xhigh);	
 	
 	//Loop over entries in branch, fill histogram one bin at a time
 	for (Int_t i = 0; i < metadata_TTree->GetEntries(); i++){
 		metadata_TTree->GetEntry(i);
-		if (Day == 31 && Month == 1 && Year == 2017){
+		if (Day == 7 && Month == 1 && Year == 2017){
 			h1->Fill(Hour);
 		}
 	}
@@ -55,12 +55,12 @@ void plotLJTJHrlySame(){
 	h1->Draw();
 	
 	//Initialize Histogram
-	TH1D *h2 = new TH1D("h2", "Long Job/All Jobs Time Distribution (January 31st, 2017)", nbinsx, xlow, xhigh);	
+	TH1D *h2 = new TH1D("h2", "Long Job/All Jobs Time Distribution (January 7th, 2017)", nbinsx, xlow, xhigh);	
 	
 	//Loop over entries in branch, fill histogram one bin at a time
 	for (Int_t i = 0; i < metadata_TTree->GetEntries(); i++){
 		metadata_TTree->GetEntry(i);
-		if (JobTime > 1800 && Day == 31 && Month == 1 && Year == 2017){
+		if (JobTime > 1800 && Day == 7 && Month == 1 && Year == 2017){
 			h2->Fill(Hour);
 		}
 	}

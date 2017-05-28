@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void plotLongJTotalJ(){
+void plotLJTJ(){
 	//Variable Declarations
 	Double_t JobTime;
 	Int_t Year;
